@@ -1,3 +1,5 @@
 <img src="https://i.imgur.com/uqn1jbA.png"></img>
 
-## SWYPE
+```
+pip install -r ./requirements.txt
+```
