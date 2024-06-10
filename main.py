@@ -1,7 +1,3 @@
-"""
-Renders a triangle that has all RGB combinations
-"""
-
 import numpy as np
 import moderngl_window as mglw
 
@@ -22,32 +18,15 @@ class SimpleColorTriangle(Example):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        with open("./shaders/vert.glsl", "r") as f:
+            vertex_shader = f.read()
+
+        with open("./shaders/frag.glsl", "r") as f:
+            fragment_shader = f.read()
+
         self.prog = self.ctx.program(
-            vertex_shader="""
-                #version 330
-
-                in vec2 in_vert;
-
-                in vec3 in_color;
-                out vec3 v_color;    // Goes to the fragment shader
-
-                void main() {
-                    gl_Position = vec4(in_vert, 0.0, 1.0);
-                    v_color = in_color;
-                }
-            """,
-            fragment_shader="""
-                #version 330
-
-                in vec3 v_color;
-                out vec4 f_color;
-
-                void main() {
-                    // We're not interested in changing the alpha value
-                    f_color = vec4(v_color, 1.0);
-                    f_color.rgb = pow(f_color.rgb, vec3(1.0 / 2.2));
-                }
-            """,
+            vertex_shader=vertex_shader,
+            fragment_shader=fragment_shader,
         )
 
         # Point coordinates are put followed by the vec3 color values
@@ -86,7 +65,7 @@ class SimpleColorTriangle(Example):
         )
 
     def render(self, time: float, frame_time: float):
-        self.ctx.clear(1.0, 1.0, 1.0)
+        self.ctx.clear(0.0, 0.0, 0.0)
         self.vao.render()
 
 
