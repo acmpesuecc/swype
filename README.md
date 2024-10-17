@@ -1,10 +1,10 @@
 # Swype
 
-[![GitHub stars](https://img.shields.io/github/stars/neb0lle/swype)](https://github.com/neb0lle/swype/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/neb0lle/swype)](https://github.com/neb0lle/swype/issues)
-[![GitHub license](https://img.shields.io/github/license/neb0lle/swype)](https://github.com/neb0lle/swype/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/acmpesuecc/swype)](https://github.com/acmpesuecc/swype/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/acmpesuecc/swype)](https://github.com/acmpesuecc/swype/issues)
+[![GitHub license](https://img.shields.io/github/license/acmpesuecc/swype)](https://github.com/acmpesuecc/swype/blob/main/LICENSE)
 
-**Swype** is a demo showcasing **3D terrain generation** using Perlin noise.
+**Swype** is a demo showcasing **3D terrain generation**.
 
 ![3D Terrain Generation](https://i.imgur.com/uqn1jbA.png)
 
@@ -17,7 +17,7 @@ Before running this project, ensure you have the following installed:
 ### Installation & Running
 
 ```bash
-git clone https://github.com/neb0lle/swype.git
+git clone https://github.com/acmpesuecc/swype.git
 cd swype
 npm i
 npm run dev
