@@ -17,7 +17,7 @@ Before running this project, ensure you have the following installed:
 ### Installation & Running
 
 ```bash
-git clone https://github.com/yourusername/swype.git
+git clone https://github.com/neb0lle/swype.git
 cd swype
 npm i
 npm run dev
