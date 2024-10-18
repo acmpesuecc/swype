@@ -4,7 +4,7 @@ const keys = {};
 
 let mouseDeltaX = 0;
 let mouseDeltaY = 0;
-let isPointerLocked = false;
+let isPointerLocked = true
 
 function handleKeyDown(event) {
 	keys[event.keyCode] = true;
@@ -15,10 +15,8 @@ function handleKeyUp(event) {
 }
 
 function handleMouseMove(event) {
-	if (isPointerLocked) {
-		mouseDeltaX += event.movementX;
-		mouseDeltaY += event.movementY;
-	}
+	mouseDeltaX += event.movementX;
+	mouseDeltaY += event.movementY;
 }
 
 function resetMouseDelta() {
@@ -26,20 +24,20 @@ function resetMouseDelta() {
 	mouseDeltaY = 0;
 }
 
-function handlePointerLockChange() {
-	isPointerLocked = document.pointerLockElement === canvas;
-}
+// function handlePointerLockChange() {
+// 	isPointerLocked = document.pointerLockElement === canvas;
+// }
 
-function handleCanvasClick() {
-	if (!isPointerLocked) {
-		canvas.requestPointerLock();
-	}
-}
+// function handleCanvasClick() {
+// 	if (!isPointerLocked) {
+// 		canvas.requestPointerLock();
+// 	}
+// }
 
 document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 document.addEventListener("mousemove", handleMouseMove);
-document.addEventListener('pointerlockchange', handlePointerLockChange);
-document.addEventListener('click', handleCanvasClick);
+// document.addEventListener('pointerlockchange', handlePointerLockChange);
+// document.addEventListener('click', handleCanvasClick);
 
-export { keys, mouseDeltaX, mouseDeltaY, resetMouseDelta, isPointerLocked };
+export { keys, mouseDeltaX, mouseDeltaY, resetMouseDelta, isPointerLocked};
