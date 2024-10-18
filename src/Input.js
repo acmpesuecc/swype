@@ -33,6 +33,7 @@ function handlePointerLockChange() {
 function handleCanvasClick() {
 	if (!isPointerLocked) {
 		canvas.requestPointerLock();
+		// canvas.requestPointerL();
 	}
 }
 
