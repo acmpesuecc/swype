@@ -40,6 +40,6 @@ document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 document.addEventListener("mousemove", handleMouseMove);
 document.addEventListener('pointerlockchange', handlePointerLockChange);
-document.addEventListener('click', handleCanvasClick);
+canvas.addEventListener('click', handleCanvasClick);
 
 export { keys, mouseDeltaX, mouseDeltaY, resetMouseDelta, isPointerLocked };
